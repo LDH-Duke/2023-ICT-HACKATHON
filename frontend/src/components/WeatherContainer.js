@@ -3,7 +3,7 @@ import React from "react";
 export default function WeatherContainer() {
     return (
         <div>
-            <label for="weather-choice">날씨를 적으세요 : </label>
+            <label for="weather-choice">날씨를 입력하세요 : </label>
             <input list="weather-choose" id="weather-choice" name="weather-choice" />
 
             <datalist id="weather-choice">
