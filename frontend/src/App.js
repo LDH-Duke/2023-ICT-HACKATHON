@@ -1,19 +1,18 @@
 import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useEffect } from 'react'
+import Signup from './pages/signup/signup'
 
 function App() {
-  useEffect(() => {
-    fetch("/main").then(
-      // response 객체의 json() 이용하여 json 데이터를 객체로 변화
-      res => res.json()
-    ).then(
-      // 데이터를 콘솔에 출력
-      data => console.log(data)
-    )
-  }, [])
 
   return (
     <div className="App">
+      <BrowserRouter>
+        <Routes>
+          <Route className='signup' path='/signup' element={<Signup />} />
+
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

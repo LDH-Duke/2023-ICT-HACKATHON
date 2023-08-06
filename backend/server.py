@@ -1,32 +1,35 @@
-from flask import Flask
-import pymysql
-
-app = Flask(__name__)
-
-# Mysql 연결 정보
+from flask import Flask, jsonify, request, current_app
+from sqlalchemy import create_engine, text
 
 
-def connect_db():
-    return pymysql.connect(
-        user='root',
-        passwd='123456',
-        host='localhost',
-        db='mydb',
-        charset='utf8',
-    )
+# db = current_app.database
 
 
-@app.route('/main')
-def main():
-    try:
-        # db연결
-        connection = connect_db()
+# def signUp():
 
-        return 0
 
-    except Exception as e:
-        return print('main error')
+def create_app(test_config=None):
+    app = Flask(__name__)
+
+    if test_config is None:
+        app.config.from_pyfile("config.py")
+    else:
+        app.config.update(test_config)
+
+    database = create_engine(
+        app.config['DB_URL'], max_overflow=0)
+    app.database = database
+
+    @app.route('/signup', methods=['POST'])
+    def signUp():
+        new_user = request.json
+        print(request.json)
+
+        return request.json
+
+    return app
 
 
 if __name__ == "__main__":
+    app = create_app()
     app.run(debug=True)
