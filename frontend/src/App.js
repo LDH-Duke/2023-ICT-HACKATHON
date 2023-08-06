@@ -13,11 +13,10 @@ import Title from './components/Title';
 import Weather from './components/Weather';
 import ImageAttachmentContent from './components/ImageAttachmentContent';
 import PersonalColor from './components/PersonalColor';
-// import CameraContainer from './components/CameraContainer';
 
 // 사이드 내비바
 const SideNav = styled.div`
-  flex: 1.5;
+  flex-direction : row;
   display: flex;
   background-color: #f0f0f0;
   padding-right: 10px;
@@ -29,7 +28,7 @@ const SideNav = styled.div`
 
 // 카메라 컨테이너
 const CameraNav = styled.div`
-  flex: 8.5;
+  flex: 1;
   display: flex;
   background-color: #f0f0f0;
   padding-right: 10px;
@@ -38,6 +37,7 @@ const CameraNav = styled.div`
   margin-left: 1rem;
 `
 
+// 카메라 (웹캠)
 const videoConstraints = {
   width: 1280,
   height: 720,
@@ -45,24 +45,25 @@ const videoConstraints = {
 };
 
 const WebcamCapture = () => (
-  <Webcam
-    audio={false}
-    height={720}
-    screenshotFormat="image/jpeg"
-    width={1280}
-    videoConstraints={videoConstraints}
-  >
-    {({ getScreenshot }) => (
-      <button
-        onClick={() => {
-          getScreenshot()
-        }}
-      >
-        Capture photo
-      </button>
-    )}
-  </Webcam>
+    <Webcam
+      audio={false}
+      height={720}
+      screenshotFormat="image/jpeg"
+      width={1280}
+      videoConstraints={videoConstraints}
+    >
+      {({ getScreenshot }) => (
+        <button
+          onClick={() => {
+            getScreenshot()
+          }}
+        >
+          촬영
+        </button>
+      )}
+    </Webcam>
 );
+
 
 function App() {
   useEffect(() => {
