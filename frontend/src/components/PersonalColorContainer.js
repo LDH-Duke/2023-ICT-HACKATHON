@@ -2,8 +2,8 @@ import React from "react";
 
 export default function PersonalColorContainer() {
     return (
-        <div>
-            <label for="personalColor-choice">퍼스널컬러를 입력하세요 : </label>
+        <div className="container">
+            <label for="personalColor-choice" className="label"> 퍼스널컬러를 입력하세요 : </label>
             <input list="personalColor-choose" id="personalColor-choice" name="personalColor-choice" />
 
             <datalist id="personalColor-choice">

@@ -1,42 +1,68 @@
+// 기본 패키지
 import React from 'react';
 import "./App.css";
 import { useEffect } from 'react';
-// import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import styled from 'styled-components';
+import Webcam from 'react-webcam';
 
-// import { BrowserRouter as Router } from 'react-router-dom';
+// css
+import styled from 'styled-components';
+import './styles.css';
+
+// 컴포넌트
 import Title from './components/Title';
 import Weather from './components/Weather';
 import ImageAttachmentContent from './components/ImageAttachmentContent';
 import PersonalColor from './components/PersonalColor';
-import './styles.css';
+// import CameraContainer from './components/CameraContainer';
 
-// const Container = styled.div`
-//   display: flex;
-// `;
-
+// 사이드 내비바
 const SideNav = styled.div`
+  flex: 1.5;
   display: flex;
-  width: 200px;
   background-color: #f0f0f0;
-  padding: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
   align-items: center;
-  margin-bottom: 10px;
   flex-direction: column;
+  margin-right: 1rem;
 `;
 
-// const NavItem = styled(Link)`
-//   display: flex;
-//   align-items: center;
-//   margin-bottom: 10px;
-//   cursor: pointer;
-//   font-weight: ${({ active }) => (active ? 'bold' : 'normal')};
-// `;
+// 카메라 컨테이너
+const CameraNav = styled.div`
+  flex: 8.5;
+  display: flex;
+  background-color: #f0f0f0;
+  padding-right: 10px;
+  padding-left: 5px;
+  align-items: center;
+  margin-left: 1rem;
+`
 
-// const Content = styled.div`
-//   padding: 10px;
-// `;
+const videoConstraints = {
+  width: 1280,
+  height: 720,
+  facingMode: "user"
+};
 
+const WebcamCapture = () => (
+  <Webcam
+    audio={false}
+    height={720}
+    screenshotFormat="image/jpeg"
+    width={1280}
+    videoConstraints={videoConstraints}
+  >
+    {({ getScreenshot }) => (
+      <button
+        onClick={() => {
+          getScreenshot()
+        }}
+      >
+        Capture photo
+      </button>
+    )}
+  </Webcam>
+);
 
 function App() {
   useEffect(() => {
@@ -49,45 +75,21 @@ function App() {
     )
   }, [])
 
+// 화면
   return (
-    // <Router>
-    //   <div className="background-gray">
-    //     <div className="background-white">
-    //      <Title />
-    //       <Container>
-    //         <SideNav>
-    //           <ul>
-    //             <NavItem to="/weather" exact>
-    //               날씨
-    //             </NavItem>
-    //             <NavItem to="/personal-color">
-    //               퍼스널컬러
-    //             </NavItem>
-    //             <NavItem to="/image-attachment">
-    //               이미지 첨부
-    //             </NavItem>
-    //           </ul>
-    //         </SideNav>
-    //         <Content>
-    //           <Routes>
-    //             <Route path="/weather" exact component={Weather} />
-    //             <Route path="/personal-color" component={PersonalColor} />
-    //             <Route path="/image-attachment" component={ImageAttachmentContent} />
-    //           </Routes>
-    //         </Content>
-    //       </Container>
-    //     </div>
-    //   </div>
-    // </Router>
-
     <div className="background-gray">
       <div className="background-white">
         <Title />
+        <div style={{ display: 'flex' }}>
           <SideNav>
             <Weather />
             <PersonalColor />
             <ImageAttachmentContent />
           </SideNav>
+          <CameraNav>
+            <WebcamCapture />
+          </CameraNav>
+        </div>
       </div>
     </div>
   );
