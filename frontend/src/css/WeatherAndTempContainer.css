@@ -1,0 +1,9 @@
+.Container {
+    width: 460px;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-left: 20px;
+    display: flex;
+}

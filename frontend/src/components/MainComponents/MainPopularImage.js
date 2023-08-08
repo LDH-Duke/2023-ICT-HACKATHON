@@ -6,7 +6,7 @@ const MainPopularImage = () => {
         <div className="ImageContainer">
             <div className="BoxImage"></div>
             <div className="BoxImage"></div>
-            <div className="BoxImage"></div>
+            <div className="BoxImage" onclick></div>
         </div>
     );
 }

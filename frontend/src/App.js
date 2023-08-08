@@ -13,9 +13,14 @@ import './styles.css';
 // import Weather from './components/Weather';
 // import ImageAttachmentContent from './components/ImageAttachmentContent';
 // import PersonalColor from './components/PersonalColor';
-import MainTitle from './components/MainTitle';
-import MainPopularTitle from './components/MainPopularTitle';
-import MainPopularImage from './components/MainPopularImage';
+import OutfitRegistrationTitle from './components/OutfitRegistrationTitle';
+import CameraTitle from './components/CameraTitle';
+import CameraBox from './components/CameraBox';
+import ClothesKeywordTitle from './components/ClothesKeywordTitle';
+import ClothesKeywordLabel from './components/ClothesKeywordLabel';
+import ImageAttachmentTitle from './components/ImageAttachmentTitle';
+import ImageAttachmentLabel from './components/ImageAttachmentLabel';
+import WeatherAndTempContainer from './components/WeatherAndTempContainer';
 
 // 사이드 내비바
 // const SideNav = styled.div`
@@ -82,9 +87,14 @@ function App() {
   return (
     <div className="BackgroundGray">
       <div className="AppContainer">
-          <MainTitle />
-          <MainPopularTitle />
-          <MainPopularImage />
+          <OutfitRegistrationTitle />
+          <CameraTitle />
+          <CameraBox />
+          <ClothesKeywordTitle />
+          <ClothesKeywordLabel />
+          <ImageAttachmentTitle />
+          <ImageAttachmentLabel />
+          <WeatherAndTempContainer />
       </div>
     </div>
   );

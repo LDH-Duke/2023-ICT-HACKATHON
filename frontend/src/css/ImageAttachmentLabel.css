@@ -1,0 +1,20 @@
+.LabelContainer {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.LabelBox {
+    display: flex;
+    width: 425px;
+    border: 1px solid #d3d3d3;
+    flex-direction: row;
+    background-color: #d3d3d3;
+    box-sizing: border-box;
+    justify-content: flex-start;
+}
+
+.LabelBox p {
+    margin: 0;
+}
