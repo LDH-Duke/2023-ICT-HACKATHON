@@ -1,0 +1,10 @@
+.btn {
+    font-size: 16px;
+    font-style: bold;
+    background-color: orange;
+    border-color: orange;
+    border-radius: 1rem;
+    color: white;
+    line-height: 2;
+    box-shadow: none;
+}

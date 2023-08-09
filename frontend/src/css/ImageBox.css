@@ -1,0 +1,46 @@
+.ImageContainer {
+    width: 460px;
+    padding-left: 20px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.MyNailyLookImageBox {
+    width: 400px;
+    height: 300px;
+    flex: 1;
+    border: 1px solid #d3d3d3;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.WeeklyBestNailyImageBox {
+    width: 100px;
+    height: 150px;
+    flex: 1;
+    border: 1px solid #d3d3d3;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.AiNailyImageBox {
+    width: 450px;
+    height: 150px;
+    flex: 1;
+    border: 1px solid #d3d3d3;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,36 @@
+.MyNailyLook {
+    padding-left: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 450px;
+    align-items: center;
+    align-content: center;
+}
+
+.WeeklyBestNaily {
+    padding-left: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 450px;
+    align-items: center;
+    align-content: center;
+}
+
+.AiNailyTitleContainer {
+    padding-left: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 450px;
+    align-items: center;
+    align-content: center;
+}
+
+.AiNailyImgContainer {
+    display: flex;
+    flex-direction: column;
+    width: 480px;
+    padding-left: 15px;
+}
