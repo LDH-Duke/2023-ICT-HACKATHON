@@ -6,6 +6,7 @@
     width: 450px;
     align-items: center;
     align-content: center;
+    font-weight: bold;
 }
 
 .WeeklyBestNaily {
@@ -16,6 +17,7 @@
     width: 450px;
     align-items: center;
     align-content: center;
+    font-weight: bold;
 }
 
 .AiNailyTitleContainer {
@@ -26,11 +28,25 @@
     width: 450px;
     align-items: center;
     align-content: center;
+    font-weight: bold;
 }
 
 .AiNailyImgContainer {
     display: flex;
     flex-direction: column;
     width: 480px;
-    padding-left: 15px;
+    padding-left: 20px;
+}
+
+.OutfitBody1 {
+    padding-left: 12px;
+    padding-top: 12px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.OutfitBody2 {
+    padding-left: 24px;
+    color: gray;
+    font-size: 14px;
 }

@@ -1,10 +1,11 @@
 import React from "react";
-import "../css/OutfitRegistrationTitle.css";
+import "../css/MainTitle.css";
 
 const OutfitRegistrationTitle = () => {
     return (
-        <div className="BoxBorder">
-            <h1>내 착장 등록</h1>
+        <div className="OutfitTitleBox">
+            <button>button</button>
+            <p>나의 착장 등록하기</p>
         </div>
     );
 }

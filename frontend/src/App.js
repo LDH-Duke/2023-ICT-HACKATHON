@@ -1,44 +1,18 @@
 // 기본 패키지
 import React from 'react';
 import "./App.css";
-import { useEffect } from 'react';
 // import Webcam from 'react-webcam';
 
 // css
-// import styled from 'styled-components';
 import './styles.css';
-import './css/TitleBox.css'
+import './css/OutfitBox.css';
 
 // 컴포넌트
-// import OutfitRegistrationTitle from './components/OutfitRegistrationTitle';
-// import CameraTitle from './components/CameraTitle';
-// import CameraBox from './components/CameraBox';
-// import ClothesKeywordTitle from './components/ClothesKeywordTitle';
-// import ClothesKeywordLabel from './components/ClothesKeywordLabel';
-// import ImageAttachmentTitle from './components/ImageAttachmentTitle';
-// import ImageAttachmentLabel from './components/ImageAttachmentLabel';
-// import WeatherAndTempContainer from './components/WeatherAndTempContainer';
-import MyNailyLookImg from './components/MyNailyLookImg';
-import MyNailyLookTitle from './components/MyNailyLookTitle';
-import MainTitle from './components/MainTitle';
-import MyNailyLookBtn from './components/MyNailyLookBtn';
-import WeeklyBestNailyTitle from './components/WeeklyBestNailyTitle';
-import WeeklyBestNailyImg from './components/WeeklyBestNailyImg';
-import AiNailyTitle from './components/AiNailyTitle';
-import AiNailyImg from './components/AiNailyImg';
-
-// 사이드 내비바
-// const SideNav = styled.div`
-//   flex-direction : row;
-//   display: flex;
-//   background-color: #f0f0f0;
-//   padding-right: 10px;
-//   padding-left: 10px;
-//   align-items: center;
-//   flex-direction: column;
-//   margin-right: 1rem;
-// `;
-
+import OutfitRegistrationTitle from './components/OutfitRegistrationTitle';
+import OutfitBody1 from './components/OutfitBody1';
+import OutfitBody2 from './components/OutfitBody2';
+import OutfitFile from './components/OutfitFile';
+import OutfitImg from './components/OutfitImg';
 // 카메라 컨테이너
 // const CameraNav = styled.div`
 //   flex: 1;
@@ -78,38 +52,24 @@ import AiNailyImg from './components/AiNailyImg';
 // );
 
 function App() {
-  useEffect(() => {
-    fetch("/main").then(
-      // response 객체의 json() 이용하여 json 데이터를 객체로 변화
-      res => res.json()
-    ).then(
-      // 데이터를 콘솔에 출력
-      data => console.log(data)
-    )
-  }, [])
-
 // 화면
   return (
-    <div className="BackgroundGray">
-      <div className="AppContainer">
-          <MainTitle />
-          <div className="MyNailyLook">
-            <MyNailyLookTitle />
-            <MyNailyLookBtn />
-          </div>
-          <MyNailyLookImg />
-          <div className="WeeklyBestNaily">
-            <WeeklyBestNailyTitle />
-          </div>
-          <WeeklyBestNailyImg />
-          <div className="AiNailyTitleContainer">
-            <AiNailyTitle />
-          </div>
-          <div className="AiNailyImgContainer">
-            <AiNailyImg />
-          </div>
+      <div className="BackgroundGray">
+        <div className="AppContainer">
+            <OutfitRegistrationTitle />
+            <div className="OutfitBody1">
+              <OutfitBody1 />
+            </div>
+            <div className="OutfitBody2">
+              <OutfitBody2 />
+            </div>
+            <OutfitFile />
+            <div className="OutfitImg">
+             <OutfitImg />
+            </div>
+
+        </div>
       </div>
-    </div>
   );
 }
 

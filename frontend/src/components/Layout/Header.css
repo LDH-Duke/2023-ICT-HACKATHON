@@ -1,0 +1,16 @@
+.headerContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d3d3d3;
+    border-bottom: none;
+}
+
+.header {
+    width: 500px;
+    background-color: #fffbef;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-bottom: none;
+}
